@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Victor's Easy English</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-1 fixed-top mb-5">
+      <div class="container">
+        <a href="#" class="navbar-brand">Victor's Easy English</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="#acceuil" class="nav-link">Acceuil</a>
+            </li>
+            <li class="nav-item">
+              <a href="#cours" class="nav-link">Cours</a>
+            </li>
+            <li class="nav-item">
+              <a href="#propos" class="nav-link">A propos</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link">Contactez-nous</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+ 
+ <!-- Modal -->
+ <section class="my-5">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="enrollLabel">Inscription</h5>
+      </div>
+      <div class="modal-body">
+        <p class="lead">Remplissez ce formulaire et nous vous reviendrons tres prochainement</p>
+
+        <form action="https://formsubmit.co/yaradounov98@gmail.com" method="POST">
+          <div class="mb-3">
+            <label for="first-name" class="col-form-label">
+              Prenom:
+            </label>
+            <input name="name" type="text" class="form-control" id="first-name" required />
+          </div>
+          <div class="mb-3">
+            <label for="last-name" class="col-form-label">Nom:</label>
+            <input name="last-name" type="text" class="form-control" id="last-name" required />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="col-form-label">Email:</label>
+            <input name="email" type="email" class="form-control" id="email" required />
+          </div>
+          <div class="mb-3">
+            <label for="phone" class="col-form-label">Telephone:</label>
+            <input name="phone" type="tel" class="form-control" id="phone" />
+          </div>
+          <div class="mb-3">
+            <label for="Course" class="col-form-label">Formule</label>
+            <select class="form-control" id="plan" name="plan">
+              <option value="standard">Base</option>
+              <option value="basic">Standard</option>
+              <option value="premium">Premium</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="Course" class="col-form-label">Quel est votre niveau d'Anglais?</label>
+            <select class="form-control" id="plan" name="plan">
+              <option value="standard">Debutant</option>
+              <option value="basic">Intermediaire</option>
+              <option value="premium">Avance</option>
+            </select>
+          </div>
+            <button type="button" class="btn btn-primary" value="send">Soumettre</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+  </section>
+
+
+
+      <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
+
+    <script>
+      mapboxgl.accessToken =
+        'pk.eyJ1IjoiYnRyYXZlcnN5IiwiYSI6ImNrbmh0dXF1NzBtbnMyb3MzcTBpaG10eXcifQ.h5ZyYCglnMdOLAGGiL1Auw'
+      var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [-71.060982, 42.35725],
+        zoom: 18,
+      })
+    </script>
+      </body>
+      </html>
