@@ -22,38 +22,7 @@
     <title>Victor's Easy English</title>
   </head>
   <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-1 fixed-top mb-5">
-      <div class="container">
-        <a href="#" class="navbar-brand">Victor's Easy English</a>
-
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navmenu"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navmenu">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a href="#acceuil" class="nav-link">Acceuil</a>
-            </li>
-            <li class="nav-item">
-              <a href="#cours" class="nav-link">Cours</a>
-            </li>
-            <li class="nav-item">
-              <a href="#propos" class="nav-link">A propos</a>
-            </li>
-            <li class="nav-item">
-              <a href="#contact" class="nav-link">Contactez-nous</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+   
  
  <!-- Modal -->
  <section class="my-5">
@@ -64,7 +33,7 @@
       </div>
       <div class="modal-body">
         <p class="lead">Remplissez ce formulaire et nous vous reviendrons tres prochainement</p>
-        <form name="contact" method="POST" action="/submit-form">
+        <form action="https://formspree.io/f/xyyavlel" method="POST">
           <div class="mb-3">
             <label for="first-name" class="col-form-label">
               Prenom:
@@ -99,16 +68,7 @@
               <option value="premium">Avance</option>
             </select>
           </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Fermer
-            </button>
-            <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
-            <button type="button" class="btn btn-primary" value="send">Soumettre</button>
+            <button type="submit" class="btn btn-primary" value="send">Soumettre</button>
           </div>
         </form>
       </div>
