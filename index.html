@@ -70,17 +70,13 @@
              offrir aux professionnels comme vous les outils et la confiance nécessaires pour exceller dans le monde
               des affaires mondial.
             </p>
-            <!-- <button
+            <button
               class="btn btn-primary btn-lg mb-3 px-5"
               data-bs-toggle="modal"
               data-bs-target="#enroll"
             >
               S'inscrire
-            </button> -->
-            <button class="btn btn-primary btn-lg mb-3 px-5" onclick="window.location.href='templates/form.html'">
-              S'inscrire
             </button>
-            
           </div>
         </div>
       </div>
@@ -91,10 +87,13 @@
       <div class="container">
         <div class="d-md-flex justify-content-between align-items-center">
           <h3 class="mb-3 mb-md-0">Obtenez Mon livre d'Anglais gratuitement en entrant votre email </h3>
-              <form  class="input-group news-input">
+            <div class="input-group news-input">
+              <form  action="https://formspree.io/yaradounov98@gmail.com/meqwdpqo"
+           method="POST">
               <input name="email" type="text" class="form-control" placeholder="Enter Email" />
               <button class="btn btn-dark btn-lg" type="button">Soumettre</button>
               </form>
+            </div>
         </div>
       </div>
     </section>
@@ -451,7 +450,7 @@
     </footer>
 
     <!-- Modal -->
-    <!-- <div
+    <div
       class="modal fade"
       id="enroll"
       tabindex="-1"
@@ -471,7 +470,7 @@
           </div>
           <div class="modal-body">
             <p class="lead">Remplissez ce formulaire et nous vous reviendrons tres prochainement</p>
-            <form name="contact" method="POST" action="/submit-form">
+            <form name="contact" netlify>
               <div class="mb-3">
                 <label for="first-name" class="col-form-label">
                   Prenom:
@@ -514,14 +513,13 @@
                 >
                   Fermer
                 </button>
-                <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
                 <button type="button" class="btn btn-primary" value="send">Soumettre</button>
               </div>
             </form>
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
 
 
     <script
